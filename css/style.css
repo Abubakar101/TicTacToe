@@ -1,0 +1,81 @@
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 3em;
+  text-align: center;
+  line-height: 150px;
+  animation: colorchange 50s infinite;
+}
+
+@keyframes colorchange {
+  0% {
+    background: #f0f8ff;
+  }
+  15% {
+    background: #fffaf0;
+  }
+  25% {
+    background: #dcdcdc;
+  }
+  35% {
+    background: #faf0e6;
+  }
+  45% {
+    background: #ffebcd;
+  }
+  55% {
+    background: #696969;
+  }
+  75% {
+    background: #800000;
+  }
+  65% {
+    background: #a9a9a9;
+  }
+  75% {
+    background: #2f4f4f;
+  }
+  85% {
+    background: #a9a9a9;
+  }
+  95% {
+    background: #ffebcd;
+  }
+  100% {
+    background: #fff8dc;
+  }
+}
+.container {
+  height: 500px;
+  width: 600px;
+  padding: 5px 10px 5px 0px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.cells {
+  float: right;
+  background-color: inherit;
+  height: 160px;
+  width: 32%;
+  border: 1px solid;
+  border-color: inherit;
+  font-size: 600%;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19); /*from W3schools  */
+}
+
+.cells:hover {
+  background-color: lightgrey;
+}
+.winner {
+  height: 50px;
+  width: 95%;
+  margin: 13px auto;
+  font-size: 525%;
+  color: aliceblue;
+  font-weight: bolder;
+  text-shadow: 2px 2px lightgrey;
+  -webkit-text-stroke: 1px black;
+}
