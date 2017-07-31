@@ -17,8 +17,9 @@ function mainFunction(e) {
       e.target.innerHTML = currentValue;
       currentValue = "O";
     }
+    saveCheck(e);
   }
-  saveCheck(e);
+  
 }
 // save and check through to see if "three" Os and/or Xs are there to select the winner
 const safeArr = {};
