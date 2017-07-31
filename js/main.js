@@ -13,7 +13,7 @@ function mainFunction(e) {
     if (currentValue === "O") {
       e.target.innerHTML = currentValue;
       currentValue = "X";
-    } else if (currentValue === "X") {
+    } else {
       e.target.innerHTML = currentValue;
       currentValue = "O";
     }
