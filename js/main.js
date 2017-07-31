@@ -4,7 +4,7 @@ const $el = {
 };
 let gameFinished = false;
 
-// X and Y values and it starts with "O" and then goes to "Y"
+// X and O values and it starts with "O" and then goes to "X"
 let currentValue = "O";
 
 function mainFunction(e) {
@@ -40,6 +40,10 @@ function saveCheck(e) {
       (safeArr.third === value && safeArr.fifth === value && safeArr.seven === value)
     ) {
       winnerChosen();
+    } //DRAW condition - if there are 9 keys in object and yet no winner is chosen then it is draw!
+    else if (Object.keys(safeArr).length === 9) {
+      $el.winner.innerHTML = `&#x2623; NO Player Wins! &#x2620;`;
+      console.log($el.winner.innerHTML);
     }
   }
   // Coverting "O" to actual "Os" and "X" to Xs.
@@ -57,4 +61,6 @@ function winnerChosen() {
   }
   gameFinished = true;
 }
+
+
 $el.container.addEventListener("click", mainFunction);
